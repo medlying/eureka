@@ -1,0 +1,36 @@
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: localhost
+    status-page-url: http://localhost:8082/index
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+spring:
+  application:
+    name: eureka-client02
+  cloud:
+    config:
+      uri: http://localhost:9001
+  datasource:
+    url: jdbc:mysql:127.0.0.1:44444/riihi
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+  data:
+    mongodb:
+      uri: mongodb://localhost:47017/local
+  redis:
+    host: localhost
+    port: 46379
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 100
+        max-wait: 1ms
+        min-idle: 1
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.simao.dao
+

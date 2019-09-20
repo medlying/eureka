@@ -1,0 +1,12 @@
+pluginManagement {
+	repositories {
+		gradlePluginPortal()
+	}
+}
+rootProject.name = 'eureka-client2'
+include 'commons'
+include 'application'
+include 'service'
+include 'dao'
+include 'migration'
+
